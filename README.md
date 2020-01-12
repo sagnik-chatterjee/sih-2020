@@ -10,11 +10,12 @@
 [Dataset]( http://jmcauley.ucsd.edu/data/amazon/)
 
 
-### Th authors for this project are :
+### The authors for this project are :
 
-1. @DhruvRaipure
-2. @unicorn-io
-3. @smritisingh26
-4. @ShamanthNyk
-5. @sagnik-chatterjee
+1. DhruvRaipure
+2. unicorn-io
+3. smritisingh26
+4. ShamanthNyk
+5. nimesh
+6. sagnik-chatterjee
 
