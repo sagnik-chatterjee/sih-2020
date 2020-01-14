@@ -255,39 +255,6 @@ X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)
 X_train_tfidf.shape
 
 
-# # NAIVE BAYES
-
-# In[76]:
-
-
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.pipeline import Pipeline
-clf_multiNB_pipe = Pipeline([("vect", CountVectorizer()), ("tfidf", TfidfTransformer()), ("clf_nominalNB", MultinomialNB())])
-clf_multiNB_pipe.fit(X_train, X_train_targetSentiment)
-
-
-# In[77]:
-
-
-import numpy as np
-predictedMultiNB = clf_multiNB_pipe.predict(X_test)
-np.mean(predictedMultiNB == X_test_targetSentiment)
-
-
-# # LOGISTIC REGRESSION
-
-# In[78]:
-
-
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import Pipeline
-clf_logReg_pipe = Pipeline([("vect", CountVectorizer()), ("tfidf", TfidfTransformer()), ("clf_logReg", LogisticRegression())])
-clf_logReg_pipe.fit(X_train, X_train_targetSentiment)
-
-import numpy as np
-predictedLogReg = clf_logReg_pipe.predict(X_test)
-np.mean(predictedLogReg == X_test_targetSentiment)
-
 
 # # SUPPORT VECTOR MACHINE
 
